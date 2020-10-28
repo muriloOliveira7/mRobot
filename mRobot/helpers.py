@@ -9,6 +9,7 @@ class Pingc:
     def start_ping(self):
         print('mRobot will ping ' + self.ip)
         ping(self.ip, count=random.randint(1, 73), verbose=True)
+        print('mRobot has finished the ping')
 
 class Http_connection:
     def __init__(self, http_url):
@@ -25,4 +26,4 @@ class Http_connection:
         resp = urllib.request.urlopen(req)  # acess the url using the request above
 
         if resp != 0:  # Check if the URL was acessed
-            print(url, " was acessed!!!")
+            print(self.http_url + " was acessed!!!")
