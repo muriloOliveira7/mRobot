@@ -1,14 +1,23 @@
 from helpers import Pingc
-from helpers import Http_connection
+from helpers import Httpc
+from helpers import Emailc
+import time
 
-print('           ____       _           _
- _ __ ___ |  _ \ ___ | |__   ___ | |_
-| '_ ` _ \| |_) / _ \| '_ \ / _ \| __|
-| | | | | |  _ < (_) | |_) | (_) | |_
-|_| |_| |_|_| \_\___/|_.__/ \___/ \__|')
+print('starting...')
 
-p1 = Pingc("8.8.8.8")
+print('           ____       _           _')
+print(' _ __ ___ |  _ \ ___ | |__   ___ | |_')
+print('|  _ ` _ \| |_) / _ \|  _ \ / _ \| __|')
+print('| | | | | |  _ < (_) | |_) | (_) | |_')
+print('|_| |_| |_|_| \_\___/|_.__/ \___/ \__|\n\n')
+
+time.sleep(10)
+
+p1 = Pingc('8.8.8.8)
 p1.start_ping()
 
-h1 = Http_connection('http://google.com')
+h1 = Httpc('http://google.com')
 h1.start_http_connection()
+
+e1 = Emailc('seiya.ubuntu@gmail.com','KxouirXq.rt.8WR' , 'murilo.oliveira7@hotmail.com')
+e1.start_email_send()
